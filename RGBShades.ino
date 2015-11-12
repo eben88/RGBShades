@@ -34,6 +34,7 @@ byte currentBrightness = STARTBRIGHTNESS; // 0-255 will be scaled to 0-MAXBRIGHT
 // Include FastLED library and other useful files
 #include <FastLED.h>
 #include "messages.h"
+#include "palettes.h"
 #include "font.h"
 #include "XYmap.h"
 #include "utils.h"
@@ -56,20 +57,30 @@ void setup() {
 }
 
 // list of functions that will be displayed
-functionList effectList[] = {threeSine,
+functionList effectList[] = {
+                             pride,
+                             colorwaves,
+                             threeSine,
                              threeDee,
-                             scrollTextOne,
+                             threeDeeBlink,
                              plasma,
                              confetti,
                              rider,
+                             scrollTextZero,
+                             scrollTextOne,
                              scrollTextTwo,
                              glitter,
                              slantBars,
                              colorFill,
-                             scrollTextZero,
                              sideRain, 
                              shadesOutline,
-                             hearts};
+                             shadesOutlineChase,
+                             hearts,
+                             peace,
+                             pacman,
+                             //blinkLeft,
+                             //blinkRight
+                             };
 
 // Timing parameters
 #define cycleTime 15000

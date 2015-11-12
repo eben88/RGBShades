@@ -25,6 +25,13 @@ void hueCycle(byte incr) {
     cycleHue+=incr;
 }
 
+// set a column to a single color
+void fillCol(int col, CRGB color){
+  for(int i=0; i<kMatrixHeight; i++) leds[XY(col, i)] = color;
+}
+
+
+
 // Set every LED in the array to a specified color
 void fillAll(CRGB fillColor) {
   for (byte i = 0; i < NUM_LEDS; i++) {
